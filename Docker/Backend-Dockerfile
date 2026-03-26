@@ -8,7 +8,7 @@ WORKDIR /app
 
 # Copy the requirements.txt file from the host to the working directory
 # This file lists all Python dependencies required by the Django application
-COPY requirements.txt .
+COPY backend/iot_backend/requirements.txt .
 
 # Install the Python dependencies listed in requirements.txt
 # The pip install command ensures all necessary packages (e.g., Django, psycopg2) are installed
@@ -24,4 +24,4 @@ EXPOSE 8000
 
 # Define the command to run when the container starts
 # This starts the Django development server, binding to all interfaces (0.0.0.0) on port 8000
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "backend/iot_backend/manage.py", "runserver", "0.0.0.0:8000"]
