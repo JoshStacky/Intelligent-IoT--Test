@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker-compose -f ./Docker/docker-compose.yaml up --build)"
+    ]
+  }
+}
